@@ -20,6 +20,8 @@ a uniform distribution, and beta is constant at set arbitratily
 at 0.99
 '''
 
+#change
+
 import numpy as np
 import scipy.stats as stats
 import matplotlib.pyplot as plt
