@@ -30,9 +30,7 @@ import matplotlib.pyplot as plt
 class mccall():
 
 	def __init__(self, 
-			w = np.random.uniform(high = 100, 
-								low=1, 
-								size = 100),
+			w = np.random.uniform(0, 100, size=100),
 			beta = 0.99):
 		'''
 		set initial values of parameters in argument
@@ -41,7 +39,7 @@ class mccall():
 		w.sort()
 		wmean = np.mean(w)
 		wstd = np.std(w)
-		pdf = stats.norm.pdf(w, wmean, wstd)
+		pdf = stats.uniform.pdf(w, 0, 100)
 		self.w, self.beta, self.pdf = w, beta, pdf
 
 	def plot_wages(self):
